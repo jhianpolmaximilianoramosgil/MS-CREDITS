@@ -6,6 +6,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+
 jobs:
   build:
     name: Build and analyze
@@ -37,7 +38,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jhianpolmaximilianoramosgil_MS-CREDITS
 
-jobs:
+
   build-and-push:
     name: build and push image
     runs-on: ubuntu-latest
